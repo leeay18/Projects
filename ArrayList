@@ -1,0 +1,55 @@
+
+/**
+ * 
+ * 
+ * Alex Lee 
+ * 10/17/17
+ */
+import java.util.*;
+public class ArrayLists
+{
+    int a = 0;
+    int sum = 0;
+    int famMem = 0;
+    boolean keepGoing = true;
+    public ArrayLists(){
+     Scanner sc = new Scanner(System.in);
+     Scanner scan = new Scanner(System.in);
+     ArrayList<Integer> age = new ArrayList<Integer>();
+      
+        while(a > -1 && keepGoing){
+            
+            System.out.println("What is your age?");
+            a = sc.nextInt();
+            age.add(a);
+            
+            sum+=a;
+            keepGoing = false;
+        }
+        
+        keepGoing = true;
+        
+        while(sum > -1 && keepGoing){
+            
+            System.out.println("Enter the age of each of your family members.");
+            famMem = sc.nextInt();
+            sum+=famMem;
+            age.add(famMem);
+            
+            System.out.println("to add another family member age press 1, any other number if not.");
+          int cont = scan.nextInt();
+           if(cont != 1) 
+               keepGoing = false;
+     
+            
+            
+        }
+        
+        System.out.println("The average age of your family is about: " + sum / age.size());
+        
+               
+    }
+
+  
+    
+}
